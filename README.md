@@ -1,3 +1,16 @@
+# GraphQL-API-CRUD
+
+<p>Created a Graphql CRUD API using NodeJS & ExpressJS</p>
+
+Npm Packages Used:
+<ul>
+  <li>graphql</li>
+  <li>express-graphql</li>
+ </ul>
+
+## Some example queries and mutations
+
+```
 mutation createPost($input:PostInput){
   createPost(input: $input){
     id 
@@ -5,7 +18,8 @@ mutation createPost($input:PostInput){
     content
   }
 }
-
+```
+```
 query getPost($id:ID!){
   getPost(id: $id){
     id
@@ -13,7 +27,8 @@ query getPost($id:ID!){
     content
   }
 }
-
+```
+```
 query getPosts{
   getPosts{
     id
@@ -21,7 +36,9 @@ query getPosts{
     content
   }
 }
+```
 
+```
 mutation updatePost($id: ID! , $input:PostInput){
   updatePost(id:$id, input:$input){
     id
@@ -29,3 +46,4 @@ mutation updatePost($id: ID! , $input:PostInput){
     content
   }
 }
+```
